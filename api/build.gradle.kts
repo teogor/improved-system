@@ -18,13 +18,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
   `kotlin-dsl`
   kotlin("plugin.serialization") version "1.9.10"
-  id("java-library")
-  alias(libs.plugins.vanniktech.maven) apply true
 }
-
-// todo centralize winds version
-group = "dev.teogor.winds"
-version = "1.0.0-alpha02"
 
 val javaVersion = JavaVersion.VERSION_11
 java {
@@ -47,7 +41,9 @@ dependencies {
   api(libs.androidx.annotation)
   api(libs.android.gradlePlugin)
   api(libs.kotlin.gradlePlugin)
+
   api(libs.kotlinx.serialization.core)
   api(libs.kotlinx.serialization.json)
   api(libs.gson)
+  api(libs.kotlin.poet)
 }

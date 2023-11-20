@@ -21,11 +21,7 @@ plugins {
   alias(libs.plugins.gradle.publish)
   alias(libs.plugins.build.config)
   kotlin("plugin.serialization") version "1.9.10"
-  alias(libs.plugins.vanniktech.maven)
 }
-
-group = "dev.teogor.winds"
-version = "1.0.0-alpha01"
 
 val javaVersion = JavaVersion.VERSION_11
 java {
@@ -50,9 +46,6 @@ dependencies {
   compileOnly(libs.kotlin.gradlePlugin)
   compileOnly(libs.ksp.gradlePlugin)
 }
-
-group = "dev.teogor.winds"
-version = "1.0.0-alpha02"
 
 gradlePlugin {
   website.set("https://source.teogor.dev/winds")

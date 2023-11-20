@@ -50,6 +50,7 @@ jsoup = "1.16.1"
 junit = "4.13.2"
 junit4 = "4.13.2"
 kotlin = "1.9.10"
+kotlin-poet = "1.14.2"
 kotlinxCollections = "0.3.5"
 kotlinxCoroutines = "1.7.1"
 kotlinxDatetime = "0.4.1"
@@ -145,6 +146,7 @@ firebase-performance = { group = "com.google.firebase", name = "firebase-perf-kt
 google-material = { group = "com.google.android.material", name = "material", version.ref = "googleMaterial" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+kotlin-poet = { group = "com.squareup", name = "kotlinpoet", version.ref = "kotlin-poet" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
