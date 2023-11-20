@@ -21,12 +21,19 @@ import dev.teogor.querent.api.impl.QuerentConfiguratorExtension
 import dev.teogor.querent.structures.BuildProfile
 import dev.teogor.querent.structures.LanguagesSchema
 import dev.teogor.querent.structures.XmlResources
+import dev.teogor.querent.structures.runningOnCi
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
 
 class Plugin : Plugin<Project> {
   override fun apply(target: Project) {
+    target.logger.info("This message will be printed to the GitHub Actions logs.")
+    target.logger.quiet("(Q) This message will be printed to the GitHub Actions logs.")
+    target.logger.quiet("(SE) git-hash=${System.getenv("GIT_HASH")}")
+    target.logger.quiet("(SE) virtual-environment=${System.getenv("VIRTUAL_ENVIRONMENT")}")
+    target.logger.quiet("(SE) CI=${runningOnCi()}")
+
     with(target) {
       extensions.create<QuerentConfiguratorExtension>(
         name = "querent",

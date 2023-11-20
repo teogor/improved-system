@@ -76,8 +76,7 @@ public final class dev/teogor/querent/structures/BuildProfile$inlined$sam$i$org_
 }
 
 public final class dev/teogor/querent/structures/BuildProfileKt {
-	public static final fun isGithubWorkflow ()Z
-	public static final fun isUserDevice ()Z
+	public static final fun runningOnCi ()Z
 	public static final fun toBooleanEnv (Ljava/lang/String;)Z
 }
 

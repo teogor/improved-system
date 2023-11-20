@@ -61,10 +61,6 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
-      project.logger.info("This message will be printed to the GitHub Actions logs.")
-      project.logger.quiet("(Q) This message will be printed to the GitHub Actions logs.")
-      project.logger.quiet("(Q) ${System.getenv("GIT_HASH")}")
-      project.logger.quiet("(Q) ${System.getenv("VIRTUAL_ENVIRONMENT")}")
       // gitHashProvider.set(
       //   if (isUserDevice()) {
       //     "N/A"
@@ -93,15 +89,11 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
   }
 }
 
-fun isGithubWorkflow(): Boolean {
-  return "VIRTUAL_ENVIRONMENT".toBooleanEnv()
-}
-
 fun String.toBooleanEnv(): Boolean {
   val envValue = System.getenv(this) ?: ""
   return envValue.lowercase() == "true"
 }
 
-fun isUserDevice(): Boolean {
-  return !isGithubWorkflow()
+fun runningOnCi(): Boolean {
+  return "CI".toBooleanEnv() // || "VIRTUAL_ENVIRONMENT".toBooleanEnv()
 }
