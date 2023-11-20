@@ -38,6 +38,10 @@ jobs:
         run: |
           echo "Git hash: ${{ github.sha }}"
 
+      - name: Print full GITHUB_ACTION environment variable
+        run: |
+          echo "GITHUB_ACTION: $GITHUB_ACTION"
+
       - name: Set GIT-HASH environment variable
         run: echo "GIT_HASH=${{ github.sha }}" >> $GITHUB_ENV
 
