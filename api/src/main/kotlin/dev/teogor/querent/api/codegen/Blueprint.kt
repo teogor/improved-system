@@ -31,6 +31,7 @@ import org.gradle.api.file.Directory
 import org.gradle.api.logging.Logger
 import org.gradle.api.logging.Logging
 import org.gradle.kotlin.dsl.findByType
+import org.gradle.kotlin.dsl.get
 
 abstract class Blueprint(
   data: FoundationData,
@@ -171,16 +172,13 @@ abstract class Blueprint(
       this@Blueprint.packageName = finalNamespace
     }
 
-    sourceSets {
-      buildTypes.forEach {
-        val variant = it.name
-        logger.quiet("Variant is $variant")
-        // named(variant) {
-        //   kotlin.srcDirs(kotlin(variant))
-        //   java.srcDirs(java(variant))
-        //   res.srcDirs(res(variant))
-        //   resources.srcDirs(resources(variant))
-        // }
+    buildTypes.forEach {
+      val variant = it.name
+      sourceSets[variant].apply {
+        kotlin.srcDirs(kotlin(variant))
+        java.srcDirs(java(variant))
+        res.srcDirs(res(variant))
+        resources.srcDirs(resources(variant))
       }
     }
 
