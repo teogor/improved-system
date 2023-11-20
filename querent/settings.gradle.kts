@@ -22,7 +22,6 @@ pluginManagement {
 }
 
 val projectDir: File = File(rootProject.projectDir.parent)
-val ceresRootDir: File = File(projectDir.parent)
 dependencyResolutionManagement {
   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
@@ -31,7 +30,7 @@ dependencyResolutionManagement {
   }
   versionCatalogs {
     create("libs") {
-      from(files("${ceresRootDir}/gradle/libs.versions.toml"))
+      from(files("${projectDir}/gradle/libs.versions.toml"))
     }
   }
 }
@@ -49,4 +48,5 @@ fun Settings.includeQuerent() {
   }
 }
 
+include("plugin")
 includeQuerent()

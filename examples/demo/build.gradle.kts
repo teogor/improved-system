@@ -1,7 +1,6 @@
 plugins {
   id("kotlin")
   id("application")
-
   id("dev.teogor.querent")
 }
 
