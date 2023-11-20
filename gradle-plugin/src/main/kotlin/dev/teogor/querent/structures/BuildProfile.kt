@@ -80,7 +80,6 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       project.tasks["pre${variant.name.capitalized()}Build"].apply {
         dependsOn(taskProvider)
         dependsOn(taskBuildTypesTask)
-        s
       }
     }
   }
