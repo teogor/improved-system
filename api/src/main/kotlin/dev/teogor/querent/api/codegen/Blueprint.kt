@@ -175,6 +175,7 @@ abstract class Blueprint(
       buildTypes.forEach {
         val variant = it.name
         named(variant) {
+          println("variant=$variant")
           kotlin.srcDirs(kotlin(variant))
           java.srcDirs(java(variant))
           res.srcDirs(res(variant))

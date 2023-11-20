@@ -48,7 +48,8 @@ dependencies {
   implementation(libs.kotlinx.serialization.json)
   implementation(libs.gson)
 
-  compileOnly(gradleApi())
+  implementation(libs.kotlin.xml.builder)
+  implementation(libs.jdom2)
 }
 
 gradlePlugin {
