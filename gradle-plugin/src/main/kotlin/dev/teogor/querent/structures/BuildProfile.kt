@@ -63,11 +63,8 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
-      gitHashProvider.set("N/A")
+      gitHashProvider.set(project.providers.of(GitHashValueSource::class) {}.get())
       outputDir.set(kotlinSources)
-      // doLast {
-      //   project.providers.of(GitHashValueSource::class) {}.get()
-      // }
     }
 
     val taskBuildTypesTask = project.tasks.register<GenerateBuildTypesTask>(
@@ -84,16 +81,6 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
         dependsOn(taskProvider)
         dependsOn(taskBuildTypesTask)
       }
-    }
-    project.afterEvaluate {
-      val gitHashProvider = project.providers.of(GitHashValueSource::class) {}
-      // val gitHashTask = task("printGitHash") {
-      //   doLast {
-      //     val gitHash = gitHashProvider.get()
-      //     println("Git hash: $gitHash")
-      //   }
-      // }
-      // gitHashTask.dependsOn(taskProvider)
     }
   }
 }
