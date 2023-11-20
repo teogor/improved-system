@@ -34,6 +34,8 @@ subprojects {
   version = "1.0.0-alpha01"
 }
 
+println("System Env")
+
 winds {
   buildFeatures {
     mavenPublish = true
