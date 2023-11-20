@@ -24,9 +24,11 @@ import dev.teogor.querent.api.impl.QuerentConfiguratorExtension
 import dev.teogor.querent.api.models.PackageDetails
 import dev.teogor.querent.tasks.GenerateBuildProfileFileTask
 import dev.teogor.querent.tasks.GenerateBuildTypesTask
+import dev.teogor.querent.utils.GitHashValueSource
 import dev.teogor.querent.utils.ceresBomDependency
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.get
+import org.gradle.kotlin.dsl.of
 import org.gradle.kotlin.dsl.register
 
 class BuildProfile(data: FoundationData) : Blueprint(data) {
@@ -63,19 +65,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       this.packageDetails.set(packageDetails)
       outputDir.set(kotlinSources)
       doLast {
-        println("Git hash: setting???")
-        val gitProcess = ProcessBuilder("git", "rev-parse", "HEAD").start()
-        val outputReader = gitProcess.inputStream.bufferedReader()
-        val gitHash = outputReader.readLine().trim()
-        outputReader.close()
-        gitProcess.waitFor()
-
-        if (gitProcess.exitValue() == 0) {
-          println("Git hash: $gitHash")
-        } else {
-          println("Failed to get Git hash")
-        }
-        gitHashProvider.set(gitHash) // project.providers.of(GitHashValueSource::class) {}.get())
+        project.providers.of(GitHashValueSource::class) {}.get()
       }
     }
 

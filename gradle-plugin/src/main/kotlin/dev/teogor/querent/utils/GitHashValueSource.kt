@@ -18,8 +18,15 @@ package dev.teogor.querent.utils
 
 import org.gradle.api.provider.ValueSource
 import org.gradle.api.provider.ValueSourceParameters
+import org.gradle.process.ExecOperations
+import java.io.ByteArrayOutputStream
+import java.nio.charset.Charset
+import javax.inject.Inject
 
 abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.None> {
+
+  @get:Inject
+  abstract val execOperations: ExecOperations
 
   // Define a variable to store the Git hash
   private var gitHash: String? = null
@@ -28,19 +35,17 @@ abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.No
     // If gitHash is already calculated, return it
     gitHash?.let { return it }
 
-    val gitProcess = ProcessBuilder("git", "rev-parse", "HEAD").start()
-    val outputReader = gitProcess.inputStream.bufferedReader()
-    val gitHash = outputReader.readLine().trim()
-    outputReader.close()
-    gitProcess.waitFor()
-
-    if (gitProcess.exitValue() == 0) {
-      // git command executed successfully, store the hash
-      this.gitHash = gitHash
-    } else {
-      // git command failed, set gitHash to "N/A"
-      this.gitHash = "N/A"
+    val output = ByteArrayOutputStream()
+    return try {
+      execOperations.exec {
+        commandLine("git", "rev-parse", "HEAD")
+        standardOutput = output
+      }
+      // Calculate and store the Git hash
+      gitHash = String(output.toByteArray(), Charset.defaultCharset()).trim()
+      gitHash ?: "N/A"
+    } catch (e: RuntimeException) {
+      "N/A"
     }
-    return gitHash
   }
 }
