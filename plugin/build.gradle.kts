@@ -36,8 +36,9 @@ compileKotlin.kotlinOptions {
 }
 
 dependencies {
-  api(project(":querent:api"))
+  api(project(":api"))
 
+  // TODO gradle insteadOf::implementation(*) use::compileOnly(*)
   implementation(gradleApi())
   implementation(libs.android.gradlePlugin)
   implementation(libs.kotlin.gradlePlugin)

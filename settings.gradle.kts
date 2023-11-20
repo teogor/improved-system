@@ -17,7 +17,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Querent"
 
-include("api")
-
+// Pre-Built
 includeBuild("examples")
 includeBuild("querent")
+
+include("api")
+include("plugin")
