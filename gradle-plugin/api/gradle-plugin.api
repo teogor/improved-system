@@ -164,12 +164,6 @@ public final class dev/teogor/querent/utils/DependenciesExtensionsKt {
 	public static final fun dependencies (Lorg/gradle/api/Project;Lkotlin/jvm/functions/Function1;)V
 }
 
-public abstract class dev/teogor/querent/utils/GitHashValueSource : org/gradle/api/provider/ValueSource {
-	public fun <init> ()V
-	public synthetic fun obtain ()Ljava/lang/Object;
-	public fun obtain ()Ljava/lang/String;
-}
-
 public final class dev/teogor/querent/utils/LanguageCodeKt {
 	public static final fun convertToUnicodeLanguageTag (Ljava/lang/String;)Ljava/lang/String;
 	public static final fun isIsoValid (Ljava/lang/String;)Z
