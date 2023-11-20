@@ -18,7 +18,6 @@ dependencyResolutionManagement {
 rootProject.name = "Querent"
 
 include("api")
-include("gradle-plugin")
 
 includeBuild("examples")
 includeBuild("querent")
