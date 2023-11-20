@@ -61,13 +61,13 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
-      gitHashProvider.set(
-        if (isUserDevice()) {
-          "N/A" // project.providers.of(GitHashValueSource::class) {}.get()
-        } else {
-          System.getenv("GIT-HASH") ?: "N/A"
-        },
-      )
+      // gitHashProvider.set(
+      //   if (isUserDevice()) {
+      //     "N/A"
+      //   } else {
+      //     System.getenv("GIT-HASH") ?: "N/A"
+      //   },
+      // )
       outputDir.set(kotlinSources)
     }
 
