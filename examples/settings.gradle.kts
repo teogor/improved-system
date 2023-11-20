@@ -1,4 +1,5 @@
 pluginManagement {
+  includeBuild("..\\querent\\plugin")
   repositories {
     google()
     mavenCentral()
@@ -12,12 +13,12 @@ dependencyResolutionManagement {
     google()
     mavenCentral()
   }
+
+  versionCatalogs {
+    create("libs") {
+      from(files("${rootDir.parentFile}/gradle/libs.versions.toml"))
+    }
+  }
 }
 
-rootProject.name = "Querent"
-
-include("api")
-include("gradle-plugin")
-
-includeBuild("examples")
-includeBuild("querent")
+include("demo")

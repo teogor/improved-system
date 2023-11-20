@@ -23,3 +23,9 @@ plugins {
 winds {
 
 }
+
+// Explicitly set the group and version for all subprojects
+subprojects {
+  group = "dev.teogor.querent"
+  version = "1.0.0-alpha01"
+}

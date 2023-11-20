@@ -36,7 +36,7 @@ compileKotlin.kotlinOptions {
 }
 
 dependencies {
-  implementation(project(":api"))
+  api(project(":api"))
 
   // TODO gradle insteadOf::implementation(*) use::compileOnly(*)
   implementation(gradleApi())
@@ -57,10 +57,10 @@ gradlePlugin {
   vcsUrl.set("https://github.com/teogor/winds")
 
   plugins {
-    register("windsPlugin") {
-      id = "dev.teogor.winds"
-      implementationClass = "dev.teogor.winds.gradle.WindsPlugin"
-      displayName = "Winds Plugin"
+    register("querentPlugin") {
+      id = "dev.teogor.querent"
+      implementationClass = "dev.teogor.querent.Plugin"
+      displayName = "Querent Plugin"
       description = "Automates project workflows, Maven publishing, and documentation generation."
       tags = listOf("workflow", "Maven", "documentation", "automation", "project-management", "publishing", "reporting")
     }
@@ -68,7 +68,7 @@ gradlePlugin {
 }
 
 buildConfig {
-  packageName("dev.teogor.winds")
+  packageName("dev.teogor.querent")
 
   buildConfigField("String", "NAME", "\"${group}\"")
   buildConfigField("String", "VERSION", "\"${version}\"")

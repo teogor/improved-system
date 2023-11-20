@@ -25,7 +25,7 @@ import com.android.build.api.variant.DynamicFeatureAndroidComponentsExtension
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.api.variant.Variant
 import dev.teogor.querent.api.utils.dir
-import java.util.*
+import java.util.Locale
 import org.gradle.api.Project
 import org.gradle.api.file.Directory
 import org.gradle.api.logging.Logger
