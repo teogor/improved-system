@@ -35,6 +35,7 @@ subprojects {
 }
 
 println("System Env")
+println("VIRTUAL_ENVIRONMENT: ${System.getenv("VIRTUAL_ENVIRONMENT")}")
 
 winds {
   buildFeatures {
