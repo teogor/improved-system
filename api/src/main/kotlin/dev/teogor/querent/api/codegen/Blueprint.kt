@@ -25,7 +25,7 @@ import com.android.build.api.variant.DynamicFeatureAndroidComponentsExtension
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.api.variant.Variant
 import dev.teogor.querent.api.utils.dir
-import java.util.Locale
+import java.util.*
 import org.gradle.api.Project
 import org.gradle.api.file.Directory
 import org.gradle.api.logging.Logger
@@ -174,12 +174,13 @@ abstract class Blueprint(
     sourceSets {
       buildTypes.forEach {
         val variant = it.name
-        named(variant) {
-          kotlin.srcDirs(kotlin(variant))
-          java.srcDirs(java(variant))
-          res.srcDirs(res(variant))
-          resources.srcDirs(resources(variant))
-        }
+        logger.quiet("Variant is $variant")
+        // named(variant) {
+        //   kotlin.srcDirs(kotlin(variant))
+        //   java.srcDirs(java(variant))
+        //   res.srcDirs(res(variant))
+        //   resources.srcDirs(resources(variant))
+        // }
       }
     }
 
