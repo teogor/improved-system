@@ -84,20 +84,22 @@ winds {
 }
 
 afterWindsPluginConfiguration { winds ->
-  val mavenPublish: MavenPublish by winds
-  if (mavenPublish.canBePublished) {
-    mavenPublishing {
-      publishToMavenCentral(SonatypeHost.S01)
-      signAllPublications()
+  if (!plugins.hasPlugin("com.gradle.plugin-publish")) {
+    val mavenPublish: MavenPublish by winds
+    if (mavenPublish.canBePublished) {
+      mavenPublishing {
+        publishToMavenCentral(SonatypeHost.S01)
+        signAllPublications()
 
-      @Suppress("UnstableApiUsage")
-      pom {
-        coordinates(
-          groupId = mavenPublish.groupId!!,
-          artifactId = mavenPublish.artifactId!!,
-          version = mavenPublish.version!!.toString(),
-        )
-        mavenPublish attachTo this
+        @Suppress("UnstableApiUsage")
+        pom {
+          coordinates(
+            groupId = mavenPublish.groupId!!,
+            artifactId = mavenPublish.artifactId!!,
+            version = mavenPublish.version!!.toString(),
+          )
+          mavenPublish attachTo this
+        }
       }
     }
   }
