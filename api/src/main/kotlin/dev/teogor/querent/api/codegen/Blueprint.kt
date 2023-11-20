@@ -25,13 +25,13 @@ import com.android.build.api.variant.DynamicFeatureAndroidComponentsExtension
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.api.variant.Variant
 import dev.teogor.querent.api.utils.dir
-import java.util.*
 import org.gradle.api.Project
 import org.gradle.api.file.Directory
 import org.gradle.api.logging.Logger
 import org.gradle.api.logging.Logging
 import org.gradle.kotlin.dsl.findByType
 import org.gradle.kotlin.dsl.get
+import java.util.Locale
 
 abstract class Blueprint(
   data: FoundationData,

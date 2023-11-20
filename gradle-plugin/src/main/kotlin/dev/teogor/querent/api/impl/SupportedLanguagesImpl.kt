@@ -16,8 +16,8 @@
 
 package dev.teogor.querent.api.impl
 
-import dev.teogor.xenoglot.LanguageFamily
 import dev.teogor.querent.api.SupportedLanguages
+import dev.teogor.xenoglot.LanguageFamily
 
 class SupportedLanguagesImpl : SupportedLanguages {
   private val languages = mutableListOf<LanguageFamily>()
