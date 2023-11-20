@@ -5,6 +5,9 @@ plugins {
 }
 
 querent {
+  buildFeatures {
+    buildProfile = true
+  }
 }
 
 application {
