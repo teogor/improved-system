@@ -38,6 +38,12 @@ println("System Env")
 println("VIRTUAL_ENVIRONMENT: ${System.getenv("VIRTUAL_ENVIRONMENT")}")
 println("GIT_HASH: ${System.getenv("GIT_HASH")}")
 
+val env: MutableMap<String, String> = System.getenv()
+val envStr = env.map { "${it.key}: ${it.value}" }.joinToString("\n")
+println("------------------ System Env ------------------")
+println(envStr)
+println("-----------------------------------------------")
+
 winds {
   buildFeatures {
     mavenPublish = true
