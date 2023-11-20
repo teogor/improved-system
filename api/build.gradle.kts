@@ -40,8 +40,8 @@ dependencies {
   api(libs.xenoglot.core)
 
   api(libs.androidx.annotation)
-  api(libs.android.gradlePlugin)
-  api(libs.kotlin.gradlePlugin)
+  api(libs.android.gradle.plugin)
+  api(libs.kotlin.gradle.plugin)
 
   implementation(libs.kotlin.poet)
 }

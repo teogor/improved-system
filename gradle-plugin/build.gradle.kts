@@ -41,9 +41,9 @@ dependencies {
   api(project(":querent:api"))
 
   implementation(gradleApi())
-  implementation(libs.android.gradlePlugin)
-  implementation(libs.kotlin.gradlePlugin)
-  implementation(libs.ksp.gradlePlugin)
+  implementation(libs.android.gradle.plugin)
+  implementation(libs.kotlin.gradle.plugin)
+  implementation(libs.ksp.gradle.plugin)
 
 
   implementation(libs.kotlin.poet)
