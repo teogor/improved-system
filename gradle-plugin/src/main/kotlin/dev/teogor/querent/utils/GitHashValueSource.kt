@@ -16,7 +16,6 @@
 
 package dev.teogor.querent.utils
 
-import org.gradle.api.GradleException
 import org.gradle.api.provider.ValueSource
 import org.gradle.api.provider.ValueSourceParameters
 
@@ -29,24 +28,26 @@ abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.No
     // If gitHash is already calculated, return it
     gitHash?.let { return it }
 
-    this.gitHash = try {
-      val gitProcess = ProcessBuilder("git", "rev-parse", "HEAD").start()
-      val outputReader = gitProcess.inputStream.bufferedReader()
-      val gitHash = outputReader.readLine().trim()
-      outputReader.close()
-      gitProcess.waitFor()
-      if (gitProcess.exitValue() == 0) {
-        // git command executed successfully, store the hash
-        gitHash
-      } else {
-        // git command failed, set gitHash to "N/A"
-        "N/A"
-      }
-    } catch (e: GradleException) {
-      "N/A"
-    } catch (e: UnsupportedOperationException) {
-      "N/A"
-    }
+    // this.gitHash = try {
+    //   val gitProcess = ProcessBuilder("git", "rev-parse", "HEAD").start()
+    //   val outputReader = gitProcess.inputStream.bufferedReader()
+    //   val gitHash = outputReader.readLine().trim()
+    //   outputReader.close()
+    //   gitProcess.waitFor()
+    //   if (gitProcess.exitValue() == 0) {
+    //     // git command executed successfully, store the hash
+    //     gitHash
+    //   } else {
+    //     // git command failed, set gitHash to "N/A"
+    //     "N/A"
+    //   }
+    // } catch (e: GradleException) {
+    //   "N/A"
+    // } catch (e: UnsupportedOperationException) {
+    //   "N/A"
+    // }
+
+    gitHash = "N/A"
 
     return gitHash!!
   }
