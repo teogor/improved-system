@@ -58,13 +58,27 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       debug.set(appExtension.buildTypes.getByName(variant.name).isDebuggable)
       packageName.set(this@BuildProfile.packageName)
       this.buildType.set(variant.name)
-      gitHashProvider.set(project.providers.of(GitHashValueSource::class) {}.get())
       ceresDependency.set(project.ceresBomDependency()?.version)
       packageId.set(namespace)
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
       outputDir.set(kotlinSources)
+      doLast {
+        println("Git hash: setting???")
+        val gitProcess = ProcessBuilder("git", "rev-parse", "HEAD").start()
+        val outputReader = gitProcess.inputStream.bufferedReader()
+        val gitHash = outputReader.readLine().trim()
+        outputReader.close()
+        gitProcess.waitFor()
+
+        if (gitProcess.exitValue() == 0) {
+          println("Git hash: $gitHash")
+        } else {
+          println("Failed to get Git hash")
+        }
+        gitHashProvider.set(project.providers.of(GitHashValueSource::class) {}.get())
+      }
     }
 
     val taskBuildTypesTask = project.tasks.register<GenerateBuildTypesTask>(
