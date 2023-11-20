@@ -20,8 +20,6 @@ import org.gradle.api.GradleException
 import org.gradle.api.provider.ValueSource
 import org.gradle.api.provider.ValueSourceParameters
 import org.gradle.process.ExecOperations
-import java.io.ByteArrayOutputStream
-import java.nio.charset.Charset
 import javax.inject.Inject
 
 abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.None> {
