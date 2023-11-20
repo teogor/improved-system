@@ -19,7 +19,6 @@ rootProject.name = "Querent"
 
 // Pre-Built
 includeBuild("examples")
-includeBuild("querent")
 
 include("api")
-include("plugin")
+includeBuild("gradle-plugin")

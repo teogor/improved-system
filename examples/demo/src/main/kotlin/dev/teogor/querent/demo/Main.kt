@@ -17,5 +17,4 @@
 package dev.teogor.querent.demo
 
 fun main() {
-  println("main")
 }

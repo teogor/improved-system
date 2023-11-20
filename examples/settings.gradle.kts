@@ -1,6 +1,5 @@
 pluginManagement {
-  includeBuild("..\\querent\\")
-  // includeBuild("..\\")
+  includeBuild("..\\gradle-plugin\\")
   repositories {
     google()
     mavenCentral()
