@@ -18,18 +18,19 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
   `kotlin-dsl`
   alias(libs.plugins.gradle.publish)
-  kotlin("plugin.serialization") version "1.9.10"
+  alias(libs.plugins.kotlin.serialization)
 }
 
+val javaVersion = JavaVersion.VERSION_1_8
 java {
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
+  sourceCompatibility = javaVersion
+  targetCompatibility = javaVersion
 }
 
-tasks.withType<KotlinCompile>().configureEach {
-  kotlinOptions {
-    jvmTarget = JavaVersion.VERSION_11.toString()
-  }
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+  languageVersion = "1.8"
+  jvmTarget = javaVersion.toString()
 }
 
 dependencies {
