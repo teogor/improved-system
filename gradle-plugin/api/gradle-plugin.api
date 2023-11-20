@@ -160,7 +160,6 @@ public final class dev/teogor/querent/utils/DependenciesExtensionsKt {
 
 public abstract class dev/teogor/querent/utils/GitHashValueSource : org/gradle/api/provider/ValueSource {
 	public fun <init> ()V
-	public abstract fun getExecOperations ()Lorg/gradle/process/ExecOperations;
 	public synthetic fun obtain ()Ljava/lang/Object;
 	public fun obtain ()Ljava/lang/String;
 }
