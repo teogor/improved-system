@@ -75,6 +75,11 @@ public final class dev/teogor/querent/structures/BuildProfile$inlined$sam$i$org_
 	public final synthetic fun execute (Ljava/lang/Object;)V
 }
 
+public final class dev/teogor/querent/structures/BuildProfileKt {
+	public static final fun isGithubWorkflow ()Z
+	public static final fun isUserDevice ()Z
+}
+
 public final class dev/teogor/querent/structures/LanguagesSchema : dev/teogor/querent/api/codegen/Blueprint {
 	public fun <init> (Ldev/teogor/querent/api/codegen/FoundationData;)V
 	public fun apply ()V
