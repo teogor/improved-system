@@ -22,6 +22,7 @@ import org.gradle.process.ExecOperations
 import java.io.ByteArrayOutputStream
 import java.nio.charset.Charset
 import javax.inject.Inject
+import org.gradle.api.GradleException
 
 abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.None> {
 
@@ -44,6 +45,8 @@ abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.No
       // Calculate and store the Git hash
       gitHash = String(output.toByteArray(), Charset.defaultCharset()).trim()
       gitHash ?: "N/A"
+    } catch (e: GradleException) {
+      "N/A"
     } catch (e: RuntimeException) {
       "N/A"
     }
