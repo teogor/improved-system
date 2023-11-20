@@ -64,11 +64,11 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
       gitHashProvider.set(
-          if (isUserDevice()) {
-              project.providers.of(GitHashValueSource::class) {}.get()
-          } else {
-              "N/A"
-          },
+        if (isUserDevice()) {
+          project.providers.of(GitHashValueSource::class) {}.get()
+        } else {
+          System.getenv("GIT-HASH") ?: "N/A"
+        },
       )
       outputDir.set(kotlinSources)
     }
@@ -98,4 +98,3 @@ fun isGithubWorkflow(): Boolean {
 fun isUserDevice(): Boolean {
   return !isGithubWorkflow()
 }
-
