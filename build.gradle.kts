@@ -138,6 +138,7 @@ subprojects {
     apply<com.diffplug.gradle.spotless.SpotlessPlugin>()
     configure<com.diffplug.gradle.spotless.SpotlessExtension> {
       lineEndings = LineEnding.UNIX
+
       kotlin {
         target("**/*.kt")
         targetExclude("**/build/**/*.kt")

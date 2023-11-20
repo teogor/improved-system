@@ -61,13 +61,14 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
-      // gitHashProvider.set(
-      //   if (isUserDevice()) {
-      //     "N/A"
-      //   } else {
-      //     System.getenv("GIT-HASH") ?: "N/A"
-      //   },
-      // )
+      gitHashProvider.set(
+        if (isVirtualEnv()) {
+          "N/A"
+        } else {
+          System.getenv("GIT-HASH") ?: "N/A"
+        },
+      )
+      throw RuntimeException("git-hash = ${gitHashProvider.get()}")
       outputDir.set(kotlinSources)
     }
 
@@ -89,11 +90,11 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
   }
 }
 
+fun isVirtualEnv(): Boolean {
+  return "CI".toBooleanEnv() || "VIRTUAL_ENVIRONMENT".toBooleanEnv()
+}
+
 fun String.toBooleanEnv(): Boolean {
   val envValue = System.getenv(this) ?: ""
   return envValue.lowercase() == "true"
-}
-
-fun runningOnCi(): Boolean {
-  return "CI".toBooleanEnv() // || "VIRTUAL_ENVIRONMENT".toBooleanEnv()
 }
