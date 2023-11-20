@@ -16,7 +16,7 @@
 
 package dev.teogor.querent.api
 
-import dev.teogor.linguistic.LanguageFamily
+import dev.teogor.xenoglot.LanguageFamily
 
 interface LanguagesSchema {
   var unqualifiedResLocale: LanguageFamily

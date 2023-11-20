@@ -16,7 +16,7 @@
 
 package dev.teogor.querent.api.impl
 
-import dev.teogor.linguistic.LanguageFamily
+import dev.teogor.xenoglot.LanguageFamily
 import dev.teogor.querent.api.SupportedLanguages
 
 class SupportedLanguagesImpl : SupportedLanguages {

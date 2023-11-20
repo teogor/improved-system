@@ -17,12 +17,12 @@
 package dev.teogor.querent.api.impl
 
 import com.android.build.gradle.BaseExtension
-import dev.teogor.linguistic.Country
-import dev.teogor.linguistic.Dialect
-import dev.teogor.linguistic.Language
-import dev.teogor.linguistic.LanguageFamily
-import dev.teogor.linguistic.LanguageTag
-import dev.teogor.linguistic.territorialize
+import dev.teogor.xenoglot.Country
+import dev.teogor.xenoglot.Dialect
+import dev.teogor.xenoglot.Language
+import dev.teogor.xenoglot.LanguageFamily
+import dev.teogor.xenoglot.LanguageTag
+import dev.teogor.xenoglot.territorialize
 import dev.teogor.querent.api.LanguagesSchema
 import dev.teogor.querent.api.SupportedLanguages
 import org.gradle.api.Project

@@ -34,13 +34,19 @@ tasks.withType<KotlinCompile>().configureEach {
 
 dependencies {
   api(project(":querent:api"))
-  api(project(":querent:languages-schema-api"))
+
+  // Xenoglot BoM
+  api(platform(libs.xenoglot.bom))
+  // Xenoglot Libraries
+  api(libs.xenoglot.core)
+
   implementation(gradleApi())
   implementation(libs.android.gradlePlugin)
   implementation(libs.kotlin.gradlePlugin)
   implementation(libs.kotlin.xml.builder)
   implementation(libs.jdom2)
   implementation(libs.kotlinx.serialization.core)
+  implementation(libs.kotlin.poet)
 }
 
 gradlePlugin {

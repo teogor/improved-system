@@ -43,7 +43,6 @@ fun Settings.includeQuerentModule(moduleName: String) {
 fun Settings.includeQuerent() {
   val libs = listOf(
     "api",
-    "languages-schema-api",
   )
   libs.forEach {
     includeQuerentModule(it)
