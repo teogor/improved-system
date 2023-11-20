@@ -92,7 +92,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
 }
 
 fun isGithubWorkflow(): Boolean {
-  return System.getenv("GITHUB_ACTION") != null
+  return (System.getenv("VIRTUAL_ENVIRONMENT") ?: false) as Boolean
 }
 
 fun isUserDevice(): Boolean {
