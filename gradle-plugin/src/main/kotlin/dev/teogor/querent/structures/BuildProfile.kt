@@ -25,6 +25,7 @@ import dev.teogor.querent.api.models.PackageDetails
 import dev.teogor.querent.tasks.GenerateBuildProfileFileTask
 import dev.teogor.querent.tasks.GenerateBuildTypesTask
 import dev.teogor.querent.utils.ceresBomDependency
+import org.gradle.api.GradleException
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.register
@@ -68,7 +69,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
           System.getenv("GIT-HASH") ?: "N/A"
         },
       )
-      throw RuntimeException("git-hash = ${gitHashProvider.get()}")
+      throw GradleException("git-hash = ${gitHashProvider.get()}")
       outputDir.set(kotlinSources)
     }
 
@@ -91,7 +92,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
 }
 
 fun isVirtualEnv(): Boolean {
-  return "CI".toBooleanEnv() || "VIRTUAL_ENVIRONMENT".toBooleanEnv()
+  return "CI".toBooleanEnv() || "CONDA".toBooleanEnv()
 }
 
 fun String.toBooleanEnv(): Boolean {
