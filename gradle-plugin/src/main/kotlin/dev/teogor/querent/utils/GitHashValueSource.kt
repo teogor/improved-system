@@ -49,6 +49,8 @@ abstract class GitHashValueSource : ValueSource<String, ValueSourceParameters.No
       }
     } catch (e: GradleException) {
       "N/A"
+    } catch (e: UnsupportedOperationException) {
+      "N/A"
     }
 
     return gitHash!!
