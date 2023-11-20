@@ -87,13 +87,13 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
     }
     project.afterEvaluate {
       val gitHashProvider = project.providers.of(GitHashValueSource::class) {}
-      val gitHashTask = task("printGitHash") {
-        doLast {
-          val gitHash = gitHashProvider.get()
-          println("Git hash: $gitHash")
-        }
-      }
-      gitHashTask.dependsOn(taskProvider)
+      // val gitHashTask = task("printGitHash") {
+      //   doLast {
+      //     val gitHash = gitHashProvider.get()
+      //     println("Git hash: $gitHash")
+      //   }
+      // }
+      // gitHashTask.dependsOn(taskProvider)
     }
   }
 }
