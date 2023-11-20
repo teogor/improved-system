@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Querent.iml" filepath="$PROJECT_DIR$/.idea/modules/Querent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/Querent.api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/Querent.api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/Querent.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/Querent.api.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/Querent.api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/Querent.api.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin/Querent.plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin/Querent.plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin/Querent.plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin/Querent.plugin.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin/Querent.plugin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin/Querent.plugin.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Winds.iml" filepath="$PROJECT_DIR$/.idea/modules/Winds.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/examples.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/examples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/demo/examples.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/demo/examples.demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/demo/examples.demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/demo/examples.demo.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/demo/examples.demo.test.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/demo/examples.demo.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/querent/querent.iml" filepath="$PROJECT_DIR$/.idea/modules/querent/querent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/querent/plugin/querent.plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/querent/plugin/querent.plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/querent/plugin/querent.plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/querent/plugin/querent.plugin.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/querent/plugin/querent.plugin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/querent/plugin/querent.plugin.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/querent/querent/querent.querent.iml" filepath="$PROJECT_DIR$/.idea/modules/querent/querent/querent.querent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/querent.querent.api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/querent.querent.api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/querent.querent.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/querent.querent.api.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/querent.querent.api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/querent.querent.api.test.iml" />
     </modules>
   </component>
 </project>
