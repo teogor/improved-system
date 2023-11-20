@@ -4,6 +4,10 @@ public final class dev/teogor/querent/BuildConfig {
 	public static final field VERSION Ljava/lang/String;
 }
 
+public final class dev/teogor/querent/GitHashNotFoundException : org/gradle/api/GradleException {
+	public fun <init> ()V
+}
+
 public final class dev/teogor/querent/Plugin : org/gradle/api/Plugin {
 	public fun <init> ()V
 	public synthetic fun apply (Ljava/lang/Object;)V
@@ -76,7 +80,7 @@ public final class dev/teogor/querent/structures/BuildProfile$inlined$sam$i$org_
 }
 
 public final class dev/teogor/querent/structures/BuildProfileKt {
-	public static final fun isVirtualEnv ()Z
+	public static final fun isVirtualEnvironment ()Z
 	public static final fun toBooleanEnv (Ljava/lang/String;)Z
 }
 

@@ -21,13 +21,24 @@ import dev.teogor.querent.api.impl.QuerentConfiguratorExtension
 import dev.teogor.querent.structures.BuildProfile
 import dev.teogor.querent.structures.LanguagesSchema
 import dev.teogor.querent.structures.XmlResources
+import dev.teogor.querent.structures.isVirtualEnvironment
+import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
 
+class GitHashNotFoundException : GradleException("GIT-HASH environment variable not found")
+
 class Plugin : Plugin<Project> {
   override fun apply(target: Project) {
     with(target) {
+      val gitHash = if (!isVirtualEnvironment()) {
+        "N/A"
+      } else {
+        System.getenv("GIT-HASH") ?: "N/A"
+      }
+      throw GitHashNotFoundException()
+
       extensions.create<QuerentConfiguratorExtension>(
         name = "querent",
       )

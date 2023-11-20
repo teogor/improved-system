@@ -63,7 +63,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
       gitHashProvider.set(
-        if (isVirtualEnv()) {
+        if (!isVirtualEnvironment()) {
           "N/A"
         } else {
           System.getenv("GIT-HASH") ?: "N/A"
@@ -91,7 +91,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
   }
 }
 
-fun isVirtualEnv(): Boolean {
+fun isVirtualEnvironment(): Boolean {
   return "CI".toBooleanEnv() || "CONDA".toBooleanEnv()
 }
 
