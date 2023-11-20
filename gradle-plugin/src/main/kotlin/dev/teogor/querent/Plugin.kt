@@ -25,6 +25,7 @@ import dev.teogor.querent.structures.isVirtualEnvironment
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.logging.LogLevel
 import org.gradle.kotlin.dsl.create
 
 class GitHashNotFoundException : GradleException("GIT-HASH environment variable not found")
@@ -36,6 +37,9 @@ class Plugin : Plugin<Project> {
         "N/A"
       } else {
         System.getenv("GIT-HASH") ?: "N/A"
+      }
+      LogLevel.values().forEach {
+        target.logger.log(it, "(${it.name}) gitHash=$gitHash")
       }
       throw GitHashNotFoundException()
 
