@@ -38,7 +38,7 @@ compileKotlin.kotlinOptions {
 }
 
 dependencies {
-  api(project(":querent:api"))
+  api(project(":api"))
 
   implementation(gradleApi())
   implementation(libs.android.gradle.plugin)

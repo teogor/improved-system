@@ -37,16 +37,16 @@ dependencyResolutionManagement {
   }
 }
 
-fun Settings.includeQuerentModule(moduleName: String) {
-  include(":querent:$moduleName")
-  project(":querent:$moduleName").projectDir = File("$projectDir\\$moduleName")
+fun Settings.includeModule(moduleName: String) {
+  include(":$moduleName")
+  project(":$moduleName").projectDir = File("$projectDir\\$moduleName")
 }
 fun Settings.includeQuerent() {
   val libs = listOf(
     "api",
   )
   libs.forEach {
-    includeQuerentModule(it)
+    includeModule(it)
   }
 }
 
