@@ -34,16 +34,8 @@ jobs:
       - name: Grant Permission to Execute Gradle
         run: chmod +x gradlew
 
-      - name: Print Git hash
-        run: |
-          echo "Git hash: ${{ github.sha }}"
-
       - name: Set GIT-HASH environment variable
         run: echo "GIT_HASH=${{ github.sha }}" >> $GITHUB_ENV
-
-      - name: Build
-        run: |
-          ./gradlew build
 
       - name: Build
         run: |

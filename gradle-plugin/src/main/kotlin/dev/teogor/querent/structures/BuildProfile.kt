@@ -24,10 +24,11 @@ import dev.teogor.querent.api.impl.QuerentConfiguratorExtension
 import dev.teogor.querent.api.models.PackageDetails
 import dev.teogor.querent.tasks.GenerateBuildProfileFileTask
 import dev.teogor.querent.tasks.GenerateBuildTypesTask
+import dev.teogor.querent.utils.GitHashValueSource
 import dev.teogor.querent.utils.ceresBomDependency
-import org.gradle.api.GradleException
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.get
+import org.gradle.kotlin.dsl.of
 import org.gradle.kotlin.dsl.register
 
 class BuildProfile(data: FoundationData) : Blueprint(data) {
@@ -64,12 +65,11 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       this.packageDetails.set(packageDetails)
       gitHashProvider.set(
         if (!isVirtualEnvironment()) {
-          "N/A"
+          project.providers.of(GitHashValueSource::class) { }.get()
         } else {
           System.getenv("GIT-HASH") ?: "N/A"
         },
       )
-      throw GradleException("git-hash = ${gitHashProvider.get()}")
       outputDir.set(kotlinSources)
     }
 
