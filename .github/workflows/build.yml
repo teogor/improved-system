@@ -48,4 +48,4 @@ jobs:
 
       - name: Build
         run: |
-          ./gradlew build
+          ./gradlew build --warning-mode all

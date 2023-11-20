@@ -45,7 +45,6 @@ dependencies {
   implementation(libs.kotlin.gradle.plugin)
   implementation(libs.ksp.gradle.plugin)
 
-
   implementation(libs.kotlin.poet)
   implementation(libs.kotlin.xml.builder)
   implementation(libs.kotlinx.serialization.core)
