@@ -63,7 +63,13 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
-      gitHashProvider.set(project.providers.of(GitHashValueSource::class) {}.get())
+      gitHashProvider.set(
+          if (isUserDevice()) {
+              project.providers.of(GitHashValueSource::class) {}.get()
+          } else {
+              "N/A"
+          },
+      )
       outputDir.set(kotlinSources)
     }
 
@@ -84,3 +90,12 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
     }
   }
 }
+
+fun isGithubWorkflow(): Boolean {
+  return System.getenv("GITHUB_ACTION") != null
+}
+
+fun isUserDevice(): Boolean {
+  return !isGithubWorkflow()
+}
+
