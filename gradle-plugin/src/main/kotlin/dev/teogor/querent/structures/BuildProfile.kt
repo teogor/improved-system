@@ -27,6 +27,7 @@ import dev.teogor.querent.tasks.GenerateBuildTypesTask
 import dev.teogor.querent.utils.GitHashValueSource
 import dev.teogor.querent.utils.ceresBomDependency
 import org.gradle.configurationcache.extensions.capitalized
+import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.of
 import org.gradle.kotlin.dsl.register
 
@@ -76,7 +77,7 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
     }
 
     project.afterEvaluate {
-      project.tasks.named("pre${variant.name.capitalized()}Build") {
+      project.tasks["pre${variant.name.capitalized()}Build"].apply {
         dependsOn(taskProvider)
         dependsOn(taskBuildTypesTask)
       }

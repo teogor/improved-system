@@ -28,6 +28,7 @@ import dev.teogor.querent.tasks.GenerateSupportedLocalesTask
 import dev.teogor.querent.tasks.SoakConfiguredLocalesTask
 import dev.teogor.querent.utils.dependencies
 import org.gradle.configurationcache.extensions.capitalized
+import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.project
 import org.gradle.kotlin.dsl.register
 
@@ -106,7 +107,7 @@ class LanguagesSchema(data: FoundationData) : Blueprint(data) {
     }
 
     project.afterEvaluate {
-      project.tasks.named("pre${variant.name.capitalized()}Build") {
+      project.tasks["pre${variant.name.capitalized()}Build"].apply {
         dependsOn(generateLocaleConfigTaskProvider)
         dependsOn(generateSupportedLocalesTaskProvider)
       }

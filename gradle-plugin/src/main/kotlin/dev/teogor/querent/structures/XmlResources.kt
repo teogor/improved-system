@@ -34,6 +34,7 @@ import dev.teogor.querent.utils.strings
 import dev.teogor.querent.utils.values
 import dev.teogor.querent.utils.variant
 import org.gradle.configurationcache.extensions.capitalized
+import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.register
 
 /**
@@ -95,7 +96,7 @@ class XmlResources(data: FoundationData) : Blueprint(data) {
     }
 
     project.afterEvaluate {
-      project.tasks.named("pre${variant.name.capitalized()}Build") {
+      project.tasks["pre${variant.name.capitalized()}Build"].apply {
         dependsOn(generateSupportedLocalesTaskProvider)
       }
     }
