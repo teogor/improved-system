@@ -38,13 +38,17 @@ compileKotlin.kotlinOptions {
 dependencies {
   implementation(project(":api"))
 
+  // TODO gradle insteadOf::implementation(*) use::compileOnly(*)
+  implementation(gradleApi())
+  implementation(libs.android.gradlePlugin)
+  implementation(libs.kotlin.gradlePlugin)
+  implementation(libs.ksp.gradlePlugin)
+
   implementation(libs.kotlinx.serialization.core)
   implementation(libs.kotlinx.serialization.json)
   implementation(libs.gson)
 
   compileOnly(gradleApi())
-  compileOnly(libs.kotlin.gradlePlugin)
-  compileOnly(libs.ksp.gradlePlugin)
 }
 
 gradlePlugin {
