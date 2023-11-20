@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11">
+      <module name="demo-plugin.plugin-core" target="1.8" />
+      <module name="demo-plugin.plugin-core.main" target="1.8" />
+      <module name="demo-plugin.plugin-core.test" target="1.8" />
+      <module name="plugin" target="17" />
+      <module name="plugin.main" target="17" />
+      <module name="plugin.test" target="17" />
+      <module name="plugin.winds" target="1.8" />
+      <module name="plugin.winds-api" target="1.8" />
+      <module name="plugin.winds-api.main" target="1.8" />
+      <module name="plugin.winds-api.test" target="1.8" />
+      <module name="plugin.winds.main" target="1.8" />
+      <module name="plugin.winds.test" target="1.8" />
+      <module name="Querent.common" target="1.8" />
+      <module name="Querent.common.main" target="1.8" />
+      <module name="Querent.common.test" target="1.8" />
+      <module name="Winds.demo-2" target="17" />
+      <module name="Winds.demo-2.main" target="17" />
+      <module name="Winds.demo-2.test" target="17" />
+      <module name="winds.gradle-plugin-api" target="11" />
+      <module name="winds.gradle-plugin-api.main" target="11" />
+      <module name="winds.gradle-plugin-api.test" target="11" />
+      <module name="winds.main" target="11" />
+      <module name="Winds.module.library-1" target="17" />
+      <module name="Winds.module.library-1.main" target="17" />
+      <module name="Winds.module.library-1.test" target="17" />
+      <module name="Winds.module.library-2" target="17" />
+      <module name="Winds.module.library-2.main" target="17" />
+      <module name="Winds.module.library-2.test" target="17" />
+      <module name="Winds.module.library-3" target="17" />
+      <module name="Winds.module.library-3.main" target="17" />
+      <module name="Winds.module.library-3.test" target="17" />
+      <module name="Winds.module.library-4" target="17" />
+      <module name="Winds.module.library-4.main" target="17" />
+      <module name="Winds.module.library-4.test" target="17" />
+      <module name="winds.test" target="11" />
+      <module name="winds.winds-core" target="11" />
+      <module name="winds.winds-core.main" target="11" />
+      <module name="winds.winds-core.test" target="11" />
+      <module name="winds.winds-plugin" target="11" />
+      <module name="winds.winds-plugin.main" target="11" />
+      <module name="winds.winds-plugin.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
