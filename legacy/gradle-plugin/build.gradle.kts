@@ -13,47 +13,63 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   `kotlin-dsl`
   alias(libs.plugins.gradle.publish)
+  alias(libs.plugins.build.config)
   kotlin("plugin.serialization") version "1.9.10"
 }
 
+val javaVersion = JavaVersion.VERSION_11
 java {
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
+  sourceCompatibility = javaVersion
+  targetCompatibility = javaVersion
 }
 
-tasks.withType<KotlinCompile>().configureEach {
-  kotlinOptions {
-    jvmTarget = JavaVersion.VERSION_11.toString()
-  }
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+  languageVersion = "1.8"
+  jvmTarget = javaVersion.toString()
 }
 
 dependencies {
   api(project(":api"))
 
-  // Xenoglot BoM
-  api(platform(libs.xenoglot.bom))
-  // Xenoglot Libraries
-  api(libs.xenoglot.core)
-
+  // TODO gradle insteadOf::implementation(*) use::compileOnly(*)
   implementation(gradleApi())
   implementation(libs.android.gradlePlugin)
   implementation(libs.kotlin.gradlePlugin)
+  implementation(libs.ksp.gradlePlugin)
+
+  implementation(libs.kotlinx.serialization.core)
+  implementation(libs.kotlinx.serialization.json)
+  implementation(libs.gson)
+
   implementation(libs.kotlin.xml.builder)
   implementation(libs.jdom2)
-  implementation(libs.kotlinx.serialization.core)
-  implementation(libs.kotlin.poet)
 }
 
 gradlePlugin {
+  website.set("https://source.teogor.dev/winds")
+  vcsUrl.set("https://github.com/teogor/winds")
+
   plugins {
     register("querentPlugin") {
       id = "dev.teogor.querent"
       implementationClass = "dev.teogor.querent.Plugin"
+      displayName = "Querent Plugin"
+      description = "Automates project workflows, Maven publishing, and documentation generation."
+      tags = listOf("workflow", "Maven", "documentation", "automation", "project-management", "publishing", "reporting")
     }
   }
+}
+
+buildConfig {
+  packageName("dev.teogor.querent")
+
+  buildConfigField("String", "NAME", "\"${group}\"")
+  buildConfigField("String", "VERSION", "\"${version}\"")
 }

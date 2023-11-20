@@ -17,8 +17,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   `kotlin-dsl`
-  alias(libs.plugins.gradle.publish)
-  kotlin("plugin.serialization") version "1.9.10"
 }
 
 java {
@@ -33,27 +31,14 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-  api(project(":api"))
-
   // Xenoglot BoM
   api(platform(libs.xenoglot.bom))
   // Xenoglot Libraries
   api(libs.xenoglot.core)
 
-  implementation(gradleApi())
-  implementation(libs.android.gradlePlugin)
-  implementation(libs.kotlin.gradlePlugin)
-  implementation(libs.kotlin.xml.builder)
-  implementation(libs.jdom2)
-  implementation(libs.kotlinx.serialization.core)
-  implementation(libs.kotlin.poet)
-}
+  api(libs.androidx.annotation)
+  api(libs.android.gradlePlugin)
+  api(libs.kotlin.gradlePlugin)
 
-gradlePlugin {
-  plugins {
-    register("querentPlugin") {
-      id = "dev.teogor.querent"
-      implementationClass = "dev.teogor.querent.Plugin"
-    }
-  }
+  implementation(libs.kotlin.poet)
 }
