@@ -186,9 +186,6 @@ subprojects {
         licenseHeaderFile(rootProject.file("spotless/copyright.xml"), "(<[^!?])")
         lineEndings = LineEnding.WINDOWS
       }
-      format("*") {
-        lineEndings = LineEnding.WINDOWS
-      }
     }
   }
 }
