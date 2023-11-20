@@ -36,6 +36,7 @@ subprojects {
 
 println("System Env")
 println("VIRTUAL_ENVIRONMENT: ${System.getenv("VIRTUAL_ENVIRONMENT")}")
+println("GIT_HASH: ${System.getenv("GIT_HASH")}")
 
 winds {
   buildFeatures {
