@@ -92,7 +92,12 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
 }
 
 fun isGithubWorkflow(): Boolean {
-  return (System.getenv("VIRTUAL_ENVIRONMENT") ?: false) as Boolean
+  return "VIRTUAL_ENVIRONMENT".toBooleanEnv()
+}
+
+fun String.toBooleanEnv(): Boolean {
+  val envValue = System.getenv(this) ?: ""
+  return envValue.lowercase() == "true"
 }
 
 fun isUserDevice(): Boolean {
