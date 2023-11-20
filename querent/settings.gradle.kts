@@ -50,5 +50,4 @@ fun Settings.includeQuerent() {
   }
 }
 
-include("plugin")
 includeQuerent()
