@@ -48,4 +48,4 @@ jobs:
 
       - name: Build
         run: |
-          ./gradlew build --warning-mode all
+          ./gradlew build --warning-mode all --stacktrace
