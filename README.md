@@ -1,4 +1,4 @@
-## Winds 🍃
+## Querent 🍃
 
 Winds aims to provide a simple and efficient way to build and publish libraries and applications for multiple platforms. It is designed to be flexible and extensible, so that it can be used to build a wide variety of libraries and applications, from simple utility libraries to complex composable libraries and applications.
 
