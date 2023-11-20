@@ -21,6 +21,8 @@ plugins {
   alias(libs.plugins.gradle.publish)
   alias(libs.plugins.build.config)
   alias(libs.plugins.kotlin.serialization)
+
+  alias(libs.plugins.winds)
 }
 
 val javaVersion = JavaVersion.VERSION_11
@@ -65,6 +67,13 @@ gradlePlugin {
       description = "Automates project workflows, Maven publishing, and documentation generation."
       tags = listOf("workflow", "Maven", "documentation", "automation", "project-management", "publishing", "reporting")
     }
+  }
+}
+
+winds {
+  mavenPublish {
+    displayName = "Gradle Plugin"
+    name = "gradle-plugin"
   }
 }
 

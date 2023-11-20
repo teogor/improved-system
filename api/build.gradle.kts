@@ -17,6 +17,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   `kotlin-dsl`
+
+  alias(libs.plugins.winds)
 }
 
 val javaVersion = JavaVersion.VERSION_11
@@ -42,4 +44,11 @@ dependencies {
   api(libs.kotlin.gradlePlugin)
 
   implementation(libs.kotlin.poet)
+}
+
+winds {
+  mavenPublish {
+    displayName = "API"
+    name = "api"
+  }
 }
