@@ -61,6 +61,10 @@ class BuildProfile(data: FoundationData) : Blueprint(data) {
       versionName.set(appExtension.defaultConfig.versionName ?: "n/a")
       versionCode.set(appExtension.defaultConfig.versionCode?.toLong() ?: 0)
       this.packageDetails.set(packageDetails)
+      project.logger.info("This message will be printed to the GitHub Actions logs.")
+      project.logger.quiet("(Q) This message will be printed to the GitHub Actions logs.")
+      project.logger.quiet("(Q) ${System.getenv("GIT_HASH")}")
+      project.logger.quiet("(Q) ${System.getenv("VIRTUAL_ENVIRONMENT")}")
       // gitHashProvider.set(
       //   if (isUserDevice()) {
       //     "N/A"
