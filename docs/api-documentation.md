@@ -6,9 +6,6 @@ its capabilities.
 
 ### Project Overview
 
-The project encompasses three primary modules: Querent, API, and Plugin. Each module plays a crucial
-role in the project's overall functionality.
-
 ### Project Documentation
 
 - [Querent](../documentation): Discover the comprehensive API reference for the project.
