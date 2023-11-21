@@ -187,22 +187,8 @@ apiValidation {
   ignoredProjects.addAll(excludedProjects)
 }
 
-afterEvaluate {
-  val cacheEnv = System.getenv("org.gradle.unsafe.configuration-cache") ?: "not provided"
-  val unsafeConfigurationCache =
-    project.findProperty("org.gradle.unsafe.configuration-cache") ?: "not provided"
-  println("$cacheEnv - $unsafeConfigurationCache")
-}
-
 subprojects {
   if (!excludedProjects.contains(project.name)) {
     apply<DokkaPlugin>()
-    println("DokkaPlugin Applied to $path")
   }
 }
-
-// task("buildDocsByDokka") {
-//   project.setProperty("org.gradle.unsafe.configuration-cache", false)
-//   dependsOn(":dokkaHtmlMultiModule")
-//   project.setProperty("org.gradle.unsafe.configuration-cache", true)
-// }
