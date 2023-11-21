@@ -28,6 +28,16 @@ Here's a step-by-step guide on how to apply the Querent plugin to your project:
 
 In your project's **build.gradle.kts** file, add the following line to the `plugins` block:
 
+=== "Groovy"
+
+```Groovy
+plugins {
+  id 'dev.teogor.querent' apply false
+}
+```
+
+=== "KTS"
+
 ```kotlin
 plugins {
   id("dev.teogor.querent") apply false
