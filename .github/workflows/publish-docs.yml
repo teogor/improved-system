@@ -62,7 +62,8 @@ jobs:
         run: |
           mkdir -p build/docs/${{ env.REPOSITORY }}/documentation
           cp -r build/dokka/htmlMultiModule/* build/docs/${{ env.REPOSITORY }}/documentation
-
+      - name: Format files with Spotless
+        uses: diffplug/spotless@latest
       - name: Install Tidy
         run: npm install tidy
         
