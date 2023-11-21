@@ -22,7 +22,7 @@ the project's `:gradle-plugin` module
 
 We welcome your valuable feedback and contributions to the project. Your insights are crucial for shaping
 the project's future and ensuring it continues to meet the needs of our community. If you encounter any
-issues or have questions, please feel free to raise them on the [GitHub Issues](https://github.com/teogor/querent/issues)
+issues or have questions, please feel free to raise them on the [GitHub Issues 🔗](https://github.com/teogor/querent/issues)
 page. Our team is dedicated to assisting you and continuously improving the project's overall quality.
 
 ### Embark on Your Coding Journey
