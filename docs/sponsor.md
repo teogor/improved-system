@@ -71,6 +71,7 @@ you can help us:
 * Maintain and update the library for compatibility with the latest technologies
 * Provide timely support to users
 
-If you are interested in becoming a sponsor, please [sponsor us](#expressing-gratitude-and-supporting-development)
+Show your appreciation for [this valuable library](./index.md) and
+[become a sponsor](#expressing-gratitude-and-supporting-development). Your support makes a real difference!
 
 Thank you for your consideration!
