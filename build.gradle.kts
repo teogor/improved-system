@@ -187,7 +187,7 @@ apiValidation {
   ignoredProjects.addAll(excludedProjects)
 }
 
-val s2 = System.getProperty("org.gradle.unsafe.configuration-cache")
+val s2 = System.getenv("org.gradle.unsafe.configuration-cache")
 val unsafeConfigurationCache = project.findProperty("org.gradle.unsafe.configuration-cache")
 println("$s2 - $unsafeConfigurationCache")
 
