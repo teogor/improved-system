@@ -23,11 +23,11 @@ theme:
   name: 'material'
   language: 'en'
   icon:
-    logo: material/owl
+    logo: 'https://source.teogor.dev/favicons/favicon-32x32.png'
 
   palette:
-    primary: 'red'
-    accent: 'red'
+    primary: 'purple'
+    accent: 'purple'
     scheme: slate
 
   font:
