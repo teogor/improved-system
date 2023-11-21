@@ -49,7 +49,7 @@ winds {
     canBePublished = false
 
     description =
-      "\uD83C\uDF0D Xenoglot seamlessly masters languages and locales, empowering developers to integrate multilingual capabilities into their applications with ease."
+      "\uD83C\uDFD7\uFE0F Querent lays the groundwork for your project's resource management, fostering consistency and efficiency across your development workflow."
 
     groupId = "dev.teogor.querent"
     artifactIdElements = 1

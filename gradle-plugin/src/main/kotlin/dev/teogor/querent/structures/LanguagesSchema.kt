@@ -45,15 +45,6 @@ class LanguagesSchema(data: FoundationData) : Blueprint(data) {
   override val packageNameSuffix: String
     get() = "lang"
 
-  override fun apply() {
-    super.apply()
-
-    project.dependencies {
-      // add("implementation", project(":core:register"))
-      // add("implementation", project(":querent:languages-schema"))
-    }
-  }
-
   override fun isEnabled() = buildFeatures.languagesSchema
 
   override fun CommonExtension<*, *, *, *, *>.finalizeDsl() {
