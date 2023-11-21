@@ -1,9 +1,9 @@
-site_name: Drifter
-site_description: 'Drifter simplifies the integration between Unity and Android, enhancing performance seamlessly and effortlessly.'
-site_author: 'Teodor Grigor (teogor)'
-site_dir: build/docs/improved-system
-site_url: 'https://github.com/teogor/drifter'
-edit_uri: 'tree/main/docs/'
+site_name: Querent
+site_description: Querent lays the groundwork for your project's resource management, fostering consistency and efficiency across your development workflow.
+site_author: Teodor Grigor (teogor)
+site_dir: build/docs/improved-systems
+site_url: https://github.com/teogor/improved-systems
+edit_uri: tree/main/docs/
 
 docs_dir: docs
 
@@ -12,15 +12,15 @@ nav:
   - 'Overview': index.md
   - 'API Documentation': api-documentation.md
   - 'Sponsor 🩷': sponsor.md
-    
+
 # Repository
-repo_name: 'drifter'
-repo_url: 'https://github.com/teogor/drifter'
+repo_name: querent
+repo_url: https://github.com/teogor/querent
 
 # Configuration
 theme:
   name: material
-  language: 'en'
+  language: en
 
   palette:
     primary: '#815CBF'
@@ -28,11 +28,11 @@ theme:
     scheme: slate
 
   font:
-    text: 'Roboto'
-    code: 'JetBrains Mono'
+    text: Roboto
+    code: JetBrains Mono
 
   features:
-    - content.tabs.link  
+    - content.tabs.link
     - content.code.copy
     - content.code.annotate
 
