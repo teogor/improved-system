@@ -18,9 +18,25 @@ package dev.teogor.querent.api
 
 import dev.teogor.xenoglot.LanguageFamily
 
+/**
+ * Interface for representing supported languages.
+ *
+ * This interface provides methods for managing the list of supported languages.
+ */
 interface SupportedLanguages {
 
+  /**
+   * Adds a language family to the list of supported languages.
+   *
+   * The language family to add to the list
+   * of supported languages.
+   */
   operator fun LanguageFamily.unaryPlus()
 
+  /**
+   * Returns an array of supported language families.
+   *
+   * @return An array of supported language families.
+   */
   fun getLanguages(): Array<LanguageFamily>
 }

@@ -18,6 +18,15 @@ package dev.teogor.querent.api.codegen
 
 import org.gradle.api.Project
 
+/**
+ * Data class representing foundation data for resource generation.
+ *
+ * This data class encapsulates the project and code writer objects
+ * required for resource generation.
+ *
+ * @param project The project for which resources are being generated.
+ * @param codeWriter The code writer used to generate the resource files.
+ */
 data class FoundationData(
   val project: Project,
   val codeWriter: CodeWriter,

@@ -26,7 +26,6 @@ import dev.teogor.querent.api.models.PackageDetails
 import dev.teogor.querent.tasks.GenerateLocaleConfigTask
 import dev.teogor.querent.tasks.GenerateSupportedLocalesTask
 import dev.teogor.querent.tasks.SoakConfiguredLocalesTask
-import dev.teogor.querent.utils.dependencies
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.project

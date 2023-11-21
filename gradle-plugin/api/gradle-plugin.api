@@ -82,7 +82,6 @@ public final class dev/teogor/querent/structures/BuildProfileKt {
 
 public final class dev/teogor/querent/structures/LanguagesSchema : dev/teogor/querent/api/codegen/Blueprint {
 	public fun <init> (Ldev/teogor/querent/api/codegen/FoundationData;)V
-	public fun apply ()V
 	public fun finalizeDsl (Lcom/android/build/api/dsl/CommonExtension;)V
 	public fun getPackageNameSuffix ()Ljava/lang/String;
 	public fun isEnabled ()Z

@@ -16,4 +16,10 @@
 
 package dev.teogor.querent.api
 
+/**
+ * Interface for representing a build profile.
+ *
+ * This interface provides methods for accessing the build
+ * profile's configuration.
+ */
 interface BuildProfile

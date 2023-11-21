@@ -19,4 +19,10 @@ package dev.teogor.querent.api.utils
 import org.gradle.api.file.Directory
 import org.gradle.api.provider.Provider
 
+/**
+ * Creates a directory provider for the specified path.
+ *
+ * @param path The path to the directory.
+ * @return A directory provider for the specified path.
+ */
 fun Provider<Directory>.dir(path: String): Directory = get().dir(path)

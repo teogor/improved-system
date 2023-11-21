@@ -18,10 +18,35 @@ package dev.teogor.querent.api
 
 import dev.teogor.xenoglot.LanguageFamily
 
+/**
+ * Interface for representing language schema options.
+ *
+ * This interface provides methods for managing the unqualified
+ * resource locale and the list of supported languages.
+ */
 interface LanguagesSchema {
+
+  /**
+   * Gets or sets the unqualified resource locale.
+   *
+   * The unqualified resource locale is the default language for
+   * the project's resources.
+   */
   var unqualifiedResLocale: LanguageFamily
 
+  /**
+   * Gets the list of supported languages.
+   *
+   * The list of supported languages represents the languages that
+   * the project's resources will be generated for.
+   */
   val supportedLanguages: List<String>
 
+  /**
+   * Adds supported languages.
+   *
+   * @param block The configuration block for adding supported
+   * languages.
+   */
   fun addSupportedLanguages(block: SupportedLanguages.() -> Unit)
 }

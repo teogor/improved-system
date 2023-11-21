@@ -20,12 +20,41 @@ import org.gradle.api.Project
 import org.gradle.api.file.Directory
 import org.gradle.api.provider.Provider
 
+/**
+ * Interface for writing resource files.
+ *
+ * This interface provides methods for writing resource files to
+ * a specified output directory.
+ */
 interface CodeWriter {
+
+  /**
+   * Access the project associated with the code writer.
+   */
   val project: Project
+
+  /**
+   * Access the source output directory provider.
+   */
   val sourceOutputDir: Provider<Directory>
+
+  /**
+   * Access the intermediates output directory provider.
+   */
   val intermediatesOutputDir: Provider<Directory>
 
+  /**
+   * Gets the output directory for the specified name.
+   *
+   * @param name The name of the output directory to retrieve.
+   * @return The output directory for the specified name.
+   */
   fun getOutputDir(name: String): Directory
 
+  /**
+   * Sets whether the code writer is enabled.
+   *
+   * @param enabled Whether the code writer is enabled.
+   */
   fun setEnabled(enabled: Boolean)
 }

@@ -18,6 +18,11 @@ package dev.teogor.querent.api.models
 
 import java.io.Serializable
 
+/**
+ * Data class for representing package details.
+ *
+ * This data class holds information about a package, including its name and namespace.
+ */
 data class PackageDetails(
   val packageName: String,
   val namespace: String,

@@ -16,12 +16,35 @@
 
 package dev.teogor.querent.api
 
+/**
+ * Interface for configuring Querent.
+ *
+ * This interface provides methods for configuring the built-in plugins
+ * and setting project-specific options.
+ */
 interface QuerentConfigurator {
-  var buildFeatures: dev.teogor.querent.api.BuildFeatures
 
-  fun buildFeatures(action: dev.teogor.querent.api.BuildFeatures.() -> Unit)
+  /**
+   * Access the `BuildFeatures` object for configuring build profile generation.
+   */
+  var buildFeatures: BuildFeatures
 
-  var languagesSchemaOptions: dev.teogor.querent.api.LanguagesSchema
+  /**
+   * Configures the `BuildFeatures` object.
+   *
+   * @param action The configuration block for the `BuildFeatures` object.
+   */
+  fun buildFeatures(action: BuildFeatures.() -> Unit)
 
-  fun languagesSchemaOptions(action: dev.teogor.querent.api.LanguagesSchema.() -> Unit)
+  /**
+   * Access the `LanguagesSchema` object for configuring language schema generation.
+   */
+  var languagesSchemaOptions: LanguagesSchema
+
+  /**
+   * Configures the `LanguagesSchema` object.
+   *
+   * @param action The configuration block for the `LanguagesSchema` object.
+   */
+  fun languagesSchemaOptions(action: LanguagesSchema.() -> Unit)
 }

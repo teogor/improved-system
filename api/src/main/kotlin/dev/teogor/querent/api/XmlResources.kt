@@ -16,4 +16,10 @@
 
 package dev.teogor.querent.api
 
+/**
+ * Interface for configuring XML resource generation.
+ *
+ * This interface provides methods for configuring the generation of
+ * XML resource files.
+ */
 interface XmlResources
