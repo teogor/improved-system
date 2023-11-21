@@ -71,6 +71,6 @@ you can help us:
 * Maintain and update the library for compatibility with the latest technologies
 * Provide timely support to users
 
-If you are interested in becoming a sponsor, please contact us at [email protected]
+If you are interested in becoming a sponsor, please [sponsor us](#expressing-gratitude-and-supporting-development)
 
 Thank you for your consideration!
