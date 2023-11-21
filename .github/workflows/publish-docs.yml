@@ -65,7 +65,10 @@ jobs:
 
       - name: Install Prettier
         run: npm install prettier
-        
+
+      - name: Format HTML files
+        run: prettier --write 'build/docs/${{ env.REPOSITORY }}/**/*.html'
+
       - name: Format generated files
         run: |
           # Format HTML files
