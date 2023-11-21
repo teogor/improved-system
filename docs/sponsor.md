@@ -38,7 +38,7 @@ contact the author using the following details:
 
 ## Sponsors
 
-Show your support by being the first sponsor of this library!
+Show your support by being the first [sponsor](#expressing-gratitude-and-supporting-development) of this library!
 
 ---
 
