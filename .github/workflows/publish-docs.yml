@@ -53,6 +53,20 @@ jobs:
       - name: Grant Permissions to gradlew
         run: chmod +x gradlew
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
+
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
