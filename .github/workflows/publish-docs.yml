@@ -100,6 +100,7 @@ jobs:
           # This part is also where you can pass other options, for example:
           prettier_options: --write **/*.{js,html}
           only_changed: False
+          base: ${{ env.DESTINATION_BRANCH || 'main' }}
 
       - name: Create PR (Pull Request)
         run: |
