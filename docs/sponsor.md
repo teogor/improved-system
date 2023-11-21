@@ -23,7 +23,7 @@ the contacts below:
 - [open-source@teogor.dev](mailto:open-source@teogor.dev)
 - [LinkedIn](https://linkedin.com/in/teogor)
 - [Instagram](https://instagram.com/teo.grigor)
-- [Twitter](https://twitter.com/teogor)
+- [X (formerly known as Twitter)](https://x.com/teogor)
 
 ## Sponsors
 
