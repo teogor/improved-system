@@ -67,10 +67,6 @@ jobs:
         run: |
           ls -R build/docs/${{ env.REPOSITORY }}/
 
-      - name: List folder contents V2
-        run: |
-          ls -R build/docs/${{ env.REPOSITORY }}/${{ env.REPOSITORY }}
-
       - id: publish-docs
         name: Deploy API Documentation
         uses: ./.github/workflows/sync-docs/
