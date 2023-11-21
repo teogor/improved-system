@@ -67,7 +67,8 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           # This part is also where you can pass other options, for example:
-          prettier_options: --write **/*.{js,html}
+          prettier_options: --write build/docs/${{ env.REPOSITORY }}/**/*.{js,html}
+          only_changed: False
 
       - id: publish-docs
         name: Deploy API Documentation
