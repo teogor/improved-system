@@ -19,8 +19,8 @@ nav:
   - 'Sponsor 🩷': sponsor.md
     
 # Repository
-repo_name: 'snitcher'
-repo_url: 'https://github.com/skydoves/snitcher'
+repo_name: 'drifter'
+repo_url: 'https://github.com/teogor/drifter'
 
 # Configuration
 theme:
