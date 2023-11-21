@@ -93,6 +93,7 @@ jobs:
         with:
           repository: teogor/source.teogor.dev
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          ref: ${{ env.DESTINATION_BRANCH || 'main' }}
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
