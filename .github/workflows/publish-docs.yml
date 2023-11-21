@@ -65,6 +65,7 @@ jobs:
       - name: Relocate API Documentation Assets
         run: |
           mkdir -p docs/${{ env.REPOSITORY }}/documentation
+          cp -r docs/* docs/${{ env.REPOSITORY }}
           cp -r build/dokka/htmlMultiModule/* docs/${{ env.REPOSITORY }}/documentation
 
       - id: publish-docs
@@ -73,7 +74,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
-          source-file: docs/${{ env.REPOSITORY }}/documentation/
+          source-file: docs/${{ env.REPOSITORY }}/
           destination-folder: ${{ env.REPOSITORY }}
           destination-repo: teogor/source.teogor.dev
           user-email: open-source@teogor.dev
