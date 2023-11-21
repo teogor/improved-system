@@ -21,6 +21,8 @@ If you want to suggest a feature request or sponsorship collaboration, you can r
 the contacts below:
 
 - [open-source@teogor.dev](mailto:open-source@teogor.dev)
+- [LinkedIn](https://linkedin.com/in/teogor)
+- [Instagram](https://instagram.com/teo.grigor)
 - [Twitter](https://twitter.com/teogor)
 
 ## Sponsors
