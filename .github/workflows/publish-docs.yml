@@ -47,7 +47,7 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Build MkDocs
-        run: mkdocs build
+        run: mkdocs build -f ./.github/mkdocs.yml
 
       - name: Setup Java
         uses: actions/setup-java@v3
