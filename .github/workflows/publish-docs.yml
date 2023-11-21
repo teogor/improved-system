@@ -43,7 +43,7 @@ jobs:
           java-version: 17
 
       - name: Generate API Documentation
-        run: ./gradlew dokkaHtmlMultiModule
+        run: ./gradlew -D'org.gradle.unsafe.configuration-cache=false' dokkaHtmlMultiModule
 
       - name: Relocate API Documentation Assets
         run: |
