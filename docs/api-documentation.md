@@ -10,12 +10,12 @@ Our project encompasses a suite of modules, each designed to address specific fu
 the overall developer experience. To delve into the intricacies of each module, refer to the dedicated
 documentation pages:
 
-- **[Querent](../documentation):** Discover the heart of our project.
+- **[Querent 🔗](../documentation):** Discover the heart of our project.
 
-- **[API](../documentation/api):** Navigate directly to the code-specific documentation for the project's
+- **[API 🔗](../documentation/api):** Navigate directly to the code-specific documentation for the project's
 `:api` module
 
-- **[Plugin](../documentation/gradle-plugin):** Navigate directly to the code-specific documentation for
+- **[Plugin 🔗](../documentation/gradle-plugin):** Navigate directly to the code-specific documentation for
 the project's `:gradle-plugin` module
 
 ### Contributions and Support
