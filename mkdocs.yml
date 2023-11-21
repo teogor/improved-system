@@ -22,8 +22,6 @@ repo_url: 'https://github.com/teogor/drifter'
 theme:
   name: 'material'
   language: 'en'
-  icon:
-    logo: 'https://source.teogor.dev/favicons/favicon-32x32.png'
 
   palette:
     primary: 'purple'
