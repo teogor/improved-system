@@ -74,6 +74,12 @@ jobs:
           # Format JavaScript files
           eslint --fix 'build/docs/${{ env.REPOSITORY }}/**/*.js'
 
+          # Format JSON files
+          jq --sort-keys --tab 'build/docs/${{ env.REPOSITORY }}/**/*.json'
+
+          # Format XML files
+          xmlstarlet format 'build/docs/${{ env.REPOSITORY }}/**/*.xml'
+
       - id: publish-docs
         name: Deploy API Documentation
         uses: ./.github/workflows/sync-docs/
