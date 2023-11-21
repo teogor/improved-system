@@ -10,7 +10,7 @@ docs_dir: docs
 # Navigation
 nav:
   - 'Overview': index.md
-  - 'Documentation': documentation
+  - 'Documentation': documentation.md
   - 'Sponsor 🩷': sponsor.md
     
 # Repository
