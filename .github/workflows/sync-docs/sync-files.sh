@@ -30,7 +30,7 @@ git config --global user.name "$USER_NAME"
 git clone --single-branch --branch $DESTINATION_BRANCH "https://x-access-token:$API_TOKEN_GITHUB@$GIT_SERVER/$DESTINATION_REPO.git" "$CLONE_DIR"
 
 # Determine the destination file path
-DEST_COPY="$DESTINATION_FOLDER"
+DEST_COPY="$CLONE_DIR/$DESTINATION_FOLDER"
 
 if [ ! -z "$RENAME" ]; then
   echo "Renaming file to: ${RENAME}"
