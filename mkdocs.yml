@@ -1,8 +1,8 @@
 site_name: Querent
 site_description: Querent lays the groundwork for your project\'s resource management, fostering consistency and efficiency across your development workflow.
 site_author: Teodor Grigor (teogor)
-site_dir: build/docs/redesigned-garbanzo
-site_url: https://github.com/teogor/redesigned-garbanzo
+site_dir: build/docs/improved-systems
+site_url: https://github.com/teogor/improved-systems
 edit_uri: tree/main/docs/
 
 docs_dir: docs
@@ -15,8 +15,8 @@ nav:
   - 'Security': security.md
 
 # Repository
-repo_name: redesigned-garbanzo
-repo_url: https://github.com/teogor/redesigned-garbanzo
+repo_name: improved-systems
+repo_url: https://github.com/teogor/improved-systems
 
 # Configuration
 theme:
@@ -24,7 +24,7 @@ theme:
   language: en
 
   palette:
-    primary: \#212121 # prev \#815CBF
+    primary: \#212121
     accent: \#8660C4
     scheme: slate
 
