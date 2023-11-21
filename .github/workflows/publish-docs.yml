@@ -62,13 +62,6 @@ jobs:
         run: |
           mkdir -p build/docs/${{ env.REPOSITORY }}/documentation
           cp -r build/dokka/htmlMultiModule/* build/docs/${{ env.REPOSITORY }}/documentation
-      
-      - name: Prettify code
-        uses: creyD/prettier_action@v4.3
-        with:
-          # This part is also where you can pass other options, for example:
-          prettier_options: --write build/docs/${{ env.REPOSITORY }}/**/*.{js,html,css,json}
-          only_changed: False
 
       - id: publish-docs
         name: Deploy API Documentation
