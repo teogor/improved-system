@@ -187,9 +187,9 @@ apiValidation {
   ignoredProjects.addAll(excludedProjects)
 }
 
-val s2 = System.getenv("org.gradle.unsafe.configuration-cache")
-val unsafeConfigurationCache = project.findProperty("org.gradle.unsafe.configuration-cache")
-println("$s2 - $unsafeConfigurationCache")
+val cacheEnv = System.getenv("org.gradle.unsafe.configuration-cache") ?: "not provided"
+val unsafeConfigurationCache = project.findProperty("org.gradle.unsafe.configuration-cache") ?: "not provided"
+println("$cacheEnv - $unsafeConfigurationCache")
 
 subprojects {
   if (!excludedProjects.contains(project.name)) {
