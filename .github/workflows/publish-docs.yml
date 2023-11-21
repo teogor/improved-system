@@ -63,6 +63,24 @@ jobs:
           mkdir -p build/docs/${{ env.REPOSITORY }}/documentation
           cp -r build/dokka/htmlMultiModule/* build/docs/${{ env.REPOSITORY }}/documentation
 
+      - name: Format generated files
+        uses: actions/format@v1
+#        with:
+#          patterns:
+#            - '**/*.html'
+#            - '**/*.css'
+#            - '**/*.js'
+#            - '**/*.json'
+
+#      - name: Format generated files
+#        uses: actions/format@v1
+#        with:
+#          files:
+#            - build/docs/${{ env.REPOSITORY }}/**/*.html
+#            - build/docs/${{ env.REPOSITORY }}/**/*.css
+#            - build/docs/${{ env.REPOSITORY }}/**/*.js
+#            - build/docs/${{ env.REPOSITORY }}/**/*.json
+
       - id: publish-docs
         name: Deploy API Documentation
         uses: ./.github/workflows/sync-docs/
