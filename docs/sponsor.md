@@ -1,30 +1,68 @@
 # Sponsor 🩷
 
-Teodor Grigor (also known as teogor) has created and contributed more than +70 open-source projects
-and libraries related to Android and Kotlin. With over his open-source projects and libraries, his
-work has left a significant impact on the development landscape. These projects have been widely embraced
-by millions of projects, software engineers, and end-users worldwide, with prominent organizations like
-PayPal, Twitter, Wikipedia, and others benefiting from their creations.
+As an active open-source developer, Teodor Grigor (also known as Teogor) has made significant contributions
+to the developer community by creating and maintaining an extensive portfolio of open-source projects and
+libraries, primarily focused on Android and Kotlin development. His work has had a profound impact on the
+development landscape, with his projects being adopted by millions of projects, software engineers, and
+end-users worldwide.
 
-If your team or personal projects have benefited from reduced development costs by using this library,
-you can show your appreciation and support by sponsoring him through the links below:
+This rephrased version provides more context about Teodor Grigor's contributions to open-source development
+and highlights the impact of his work on the developer community and prominent organizations.
+
+Has this library helped you streamline your development process and reduce costs? If so, consider expressing
+your gratitude and supporting the developer's efforts through the provided sponsorship links below.
 
 - [GitHub Sponsor](https://github.com/sponsors/teogor)
 - [PayPal](https://www.paypal.com/paypalme/teogor)
 
-Sponsoring helps sustain the continuous development and improvement of the library, ensuring that it remains
-a valuable resource for the community. Your contribution not only shows gratitude but also contributes to the
-growth and success of open-source projects like this one. Feel free to lend your support and make a positive
-impact on the developer's efforts.
+Your support is crucial for the ongoing development and enhancement of this library, ensuring it remains
+a valuable asset for the community. By contributing, you not only express your appreciation but also
+actively participate in the growth and success of open-source projects like this one. Join us in making
+a positive impact on the developer's efforts and the future of this project.
 
-If you want to suggest a feature request or sponsorship collaboration, you can reach out to the auther with
-the contacts below:
+If you have suggestions for feature requests or would like to explore sponsorship opportunities, please
+contact the author using the following details:
 
 - [open-source@teogor.dev](mailto:open-source@teogor.dev)
 - [LinkedIn](https://linkedin.com/in/teogor)
 - [Instagram](https://instagram.com/teo.grigor)
-- [X (formerly known as Twitter)](https://x.com/teogor)
+- [X (formerly known as Twitter)](https://x.com/teogor_dev)
 
 ## Sponsors
 
-Be the first sponsor for this library!
+Show your support by being the first sponsor of this library!
+
+---
+
+## Sponsors
+
+We are incredibly grateful for the generous support of our sponsors. Their contributions help us continue
+developing and improving this library.
+
+### Gold Sponsors
+
+* [Sponsor Name](Sponsor Website)
+* [Sponsor Name](Sponsor Website)
+
+### Silver Sponsors
+
+* [Sponsor Name](Sponsor Website)
+* [Sponsor Name](Sponsor Website)
+
+### Bronze Sponsors
+
+* [Sponsor Name](Sponsor Website)
+* [Sponsor Name](Sponsor Website)
+
+## Become a Sponsor
+
+Your support is crucial for the ongoing development and enhancement of this library. By becoming a sponsor,
+you can help us:
+
+* Continue developing new features and improvements
+* Maintain and update the library for compatibility with the latest technologies
+* Provide timely support to users
+
+If you are interested in becoming a sponsor, please contact us at [email protected]
+
+Thank you for your consideration!
