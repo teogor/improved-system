@@ -2,8 +2,8 @@
 
 Welcome to the documentation for our project. Below are links to the generated documentation for different modules:
 
-- [API](documentation/api)
-- [Plugin](documentation/gradle-plugin)
+- [API](./documentation/api)
+- [Plugin](../documentation/gradle-plugin)
 
 Feel free to explore the documentation for each module to understand the project's structure, API, and usage.
 
