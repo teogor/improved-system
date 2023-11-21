@@ -50,10 +50,10 @@ mkdir -p $CLONE_DIR/$DESTINATION_FOLDER
 
 if [ -z "$USE_RSYNC" ]; then
   echo "Copying using cp"
-  cp -R "$SOURCE_FILE" "$DEST_COPY"
+  cp -R "$SOURCE_FILE/." "$DEST_COPY"
 else
   echo "Copying using rsync"
-  rsync -avrh "$SOURCE_FILE" "$DEST_COPY"
+  rsync -avrh "$SOURCE_FILE/" "$DEST_COPY"
 fi
 
 # Check out the specified branch or create a new one
