@@ -8,6 +8,7 @@ import dev.teogor.winds.api.model.createVersion
 import dev.teogor.winds.api.provider.Scm
 import dev.teogor.winds.gradle.utils.afterWindsPluginConfiguration
 import dev.teogor.winds.gradle.utils.attachTo
+import org.gradle.internal.classpath.Instrumented.systemProperties
 import org.jetbrains.dokka.gradle.DokkaPlugin
 
 buildscript {
@@ -186,8 +187,19 @@ apiValidation {
   ignoredProjects.addAll(excludedProjects)
 }
 
+val s2 = System.getProperty("org.gradle.unsafe.configuration-cache")
+val unsafeConfigurationCache = project.findProperty("org.gradle.unsafe.configuration-cache")
+println("$s2 - $unsafeConfigurationCache")
+
 subprojects {
   if (!excludedProjects.contains(project.name)) {
     apply<DokkaPlugin>()
+    println("DokkaPlugin Applied to $path")
   }
 }
+
+// task("buildDocsByDokka") {
+//   project.setProperty("org.gradle.unsafe.configuration-cache", false)
+//   dependsOn(":dokkaHtmlMultiModule")
+//   project.setProperty("org.gradle.unsafe.configuration-cache", true)
+// }

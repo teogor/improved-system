@@ -1,0 +1,21 @@
+name: Build Docs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set configuration cache to false
+        run: echo "org.gradle.unsafe.configuration-cache=false" >> $GITHUB_ENV
+
+      - name: Build documentation
+        run: ./gradlew dokkaHtmlMultiModule
+
+      - name: Set configuration cache to true
+        run: echo "org.gradle.unsafe.configuration-cache=true" >> $GITHUB_ENV
