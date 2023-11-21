@@ -24,7 +24,7 @@ theme:
 
   palette:
     primary: '#815CBF'
-    accent: '#815CBF'
+    accent: '#8660C4'
     scheme: slate
 
   font:
