@@ -63,8 +63,8 @@ gradlePlugin {
       id = "dev.teogor.querent"
       implementationClass = "dev.teogor.querent.Plugin"
       displayName = "Querent Plugin"
-      description = "Automates project workflows, Maven publishing, and documentation generation."
-      tags = listOf("workflow", "Maven", "documentation", "automation", "project-management", "publishing", "reporting")
+      description = "Querent lays the groundwork for your project's resource management, fostering consistency and efficiency across your development workflow."
+      tags = listOf("android", "kotlin", "productivity", "tools", "dsl", "code-generation", "teogor")
     }
   }
 }

@@ -31,6 +31,7 @@ interface BuildFeatures {
    * project is built. Enabling this option allows customizing the
    * build process for specific scenarios or purposes.
    *
+   * The default value is set to `false`, indicating that build
    * profiles are not created. When set to `true`, build profiles
    * are generated based on the applied configurations.
    *

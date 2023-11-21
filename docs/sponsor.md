@@ -40,28 +40,6 @@ contact the author using the following details:
 
 Show your support by being the first [sponsor](#expressing-gratitude-and-supporting-development) of this library!
 
----
-
-## Sponsors
-
-We are incredibly grateful for the generous support of our sponsors. Their contributions help us continue
-developing and improving this library.
-
-### Gold Sponsors
-
-* [Sponsor Name](Sponsor Website)
-* [Sponsor Name](Sponsor Website)
-
-### Silver Sponsors
-
-* [Sponsor Name](Sponsor Website)
-* [Sponsor Name](Sponsor Website)
-
-### Bronze Sponsors
-
-* [Sponsor Name](Sponsor Website)
-* [Sponsor Name](Sponsor Website)
-
 ## Become a Sponsor
 
 Your support is crucial for the ongoing development and enhancement of this library. By becoming a sponsor,
