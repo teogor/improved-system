@@ -11,13 +11,13 @@ role in the project's overall functionality.
 
 ### Project Documentation
 
+- [Querent](../documentation): Discover the comprehensive API reference for the project.
+
 For in-depth exploration of each module, refer to the dedicated documentation pages:
 
-- [Querent](../documentation): Delve into the core functionality of the Querent module.
+- [API](../documentation/api): Discover the comprehensive API reference for the project's `:api` module.
 
-- [API](../documentation/api): Discover the comprehensive API reference for the project's features.
-
-- [Plugin](../documentation/gradle-plugin): Uncover the usage and implementation of the Gradle plugin.
+- [Plugin](../documentation/gradle-plugin): Discover the comprehensive API reference for the project's `:gradle-plugin` module.
 
 ### Contributions and Support
 
