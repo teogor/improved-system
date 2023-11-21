@@ -23,8 +23,8 @@ theme:
   language: 'en'
 
   palette:
-    primary: 'purple'
-    accent: 'purple'
+    primary: '#3C1589'
+    accent: '#3C1589'
     scheme: slate
 
   font:
