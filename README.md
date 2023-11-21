@@ -28,7 +28,7 @@ Here's a step-by-step guide on how to apply the Querent plugin to your project:
 
 In your project's **build.gradle.kts** file, add the following line to the `plugins` block:
 
-```
+```kotlin
 plugins {
   id("dev.teogor.querent") apply false
 }
@@ -40,7 +40,7 @@ This line tells Gradle to apply the Querent plugin to your project.
 
 In your project's **build.gradle.kts** file, apply the Querent plugin to your build configuration. For example, if you're building an Android app, you would add the following line to the `android` block:
 
-```
+```kotlin
 plugins {
   id("dev.teogor.querent")
 }
