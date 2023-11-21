@@ -64,30 +64,7 @@ jobs:
           cp -r build/dokka/htmlMultiModule/* build/docs/${{ env.REPOSITORY }}/documentation
 
       - name: Format HTML files
-        run: tidy 'build/docs/${{ env.REPOSITORY }}/**/*.html'
-        
-      - name: Install Prettier
-        run: npm install prettier
-
-      - name: Format HTML files
-        run: prettier --write 'build/docs/${{ env.REPOSITORY }}/**/*.html'
-
-      - name: Format generated files
-        run: |
-          # Format HTML files
-          prettier --write 'build/docs/${{ env.REPOSITORY }}/**/*.html'
-          
-          # Format CSS files
-          stylelint --fix 'build/docs/${{ env.REPOSITORY }}/**/*.css'
-          
-          # Format JavaScript files
-          eslint --fix 'build/docs/${{ env.REPOSITORY }}/**/*.js'
-
-          # Format JSON files
-          jq --sort-keys --tab 'build/docs/${{ env.REPOSITORY }}/**/*.json'
-
-          # Format XML files
-          xmlstarlet format 'build/docs/${{ env.REPOSITORY }}/**/*.xml'
+        run: tidy --indent auto --indent-spaces 2 'build/docs/${{ env.REPOSITORY }}/**/*.html'
 
       - id: publish-docs
         name: Deploy API Documentation
