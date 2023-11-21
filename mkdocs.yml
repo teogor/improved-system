@@ -26,8 +26,8 @@ theme:
     logo: material/owl
 
   palette:
-    primary: 'blue'
-    accent: 'blue'
+    primary: 'red'
+    accent: 'red'
     scheme: slate
 
   font:
@@ -42,7 +42,7 @@ theme:
 extra:
   analytics:
     provider: google
-    property: G-1SBY14Q79E    
+    property: G-XN9N2SV8QZ
 
 # Extensions
 markdown_extensions:
