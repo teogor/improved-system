@@ -1,5 +1,5 @@
 site_name: Drifter
-site_description: 'Drifter captures global crashes, enabling easy redirection to the exception tracing screen for swift recovery.'
+site_description: 'Drifter simplifies the integration between Unity and Android, enhancing performance seamlessly and effortlessly.'
 site_author: 'Teodor Grigor (teogor)'
 site_dir: build/docs/improved-system
 site_url: 'https://github.com/teogor/drifter'
