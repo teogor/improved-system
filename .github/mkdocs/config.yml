@@ -4,7 +4,6 @@ site_author: 'Teodor Grigor (teogor)'
 site_dir: build/docs/improved-system
 site_url: 'https://github.com/teogor/drifter'
 edit_uri: 'tree/main/docs/'
-remote_branch: gh-pages
 
 docs_dir: ./docs
 
