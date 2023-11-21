@@ -5,7 +5,7 @@ site_dir: build/docs/improved-system
 site_url: 'https://github.com/teogor/drifter'
 edit_uri: 'tree/main/docs/'
 
-docs_dir: ../../docs
+docs_dir: docs
 
 # Navigation
 nav:
