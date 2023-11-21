@@ -20,24 +20,6 @@ jobs:
 
       - name: Grant Permission to Execute Gradle
         run: chmod +x gradlew
-        
-      - name: Set Gradle property
-        uses: actions/set-env@v3
-        with:
-          name: org.gradle.unsafe.configuration-cache
-          value: "false"
-
-      - name: Build Dokka documentation
-        uses: gradle/gradle-build-action@v2
-        with:
-          gradle-version: release-candidate
-          arguments: dokkaHtmlMultiModule
-
-      - name: Unset Gradle property
-        uses: actions/set-env@v3
-        with:
-          name: org.gradle.unsafe.configuration-cache
-          value: "true"
 
       - name: Set configuration cache to false
         run: echo "org.gradle.unsafe.configuration-cache=false" >> $GITHUB_ENV
