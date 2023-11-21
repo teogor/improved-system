@@ -1,5 +1,5 @@
-site_name: Snitcher
-site_description: 'Snitcher captures global crashes, enabling easy redirection to the exception tracing screen for swift recovery.'
+site_name: Drifter
+site_description: 'Drifter captures global crashes, enabling easy redirection to the exception tracing screen for swift recovery.'
 site_author: 'Teodor Grigor (teogor)'
 site_dir: build/docs/improved-system
 site_url: 'https://github.com/teogor/drifter'
@@ -11,12 +11,7 @@ docs_dir: docs
 # Navigation
 nav:
   - 'Overview': index.md
-  - 'Trace Global Exception': trace-global-exception.md
-  - 'Exception Screen': custom-trace-screen.md
-  - 'Launcher Activity': custom-launcher-activity.md
-  - 'Snitcher Theme': custom-theme.md
-  - 'Build Types': custom-build-type.md
-  - 'Trace Strategy': trace-strategy.md
+  - 'Documentation': documentation
   - 'Sponsor 🩷': sponsor.md
     
 # Repository
