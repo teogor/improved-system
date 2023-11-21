@@ -19,7 +19,7 @@ repo_url: 'https://github.com/teogor/drifter'
 
 # Configuration
 theme:
-  name: bootstrap4
+  name: material
   language: 'en'
 
   palette:
