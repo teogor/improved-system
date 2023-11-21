@@ -40,7 +40,7 @@ fi
 # Delete the previous folder if it exists
 if [ -d "$DEST_COPY" ]; then
   echo "Deleting existing folder: $DEST_COPY"
-  rm -rf "$DEST_COPY"
+  rm -rf "$DEST_COPY/*"
 fi
 
 # Copy the source file to the destination repository
